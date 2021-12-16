@@ -1,1 +1,0 @@
-cmd_/home/ubuntu/robotsystem_device_driver/kadai1/kadai1.ko := ld -r -EL  -maarch64elf --build-id=sha1  -T scripts/module.lds -o /home/ubuntu/robotsystem_device_driver/kadai1/kadai1.ko /home/ubuntu/robotsystem_device_driver/kadai1/kadai1.o /home/ubuntu/robotsystem_device_driver/kadai1/kadai1.mod.o;  true
