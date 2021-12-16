@@ -1,1 +1,0 @@
-cmd_/home/ubuntu/robotsystem_device_driver/kadai1/Module.symvers := sed 's/ko$$/o/' /home/ubuntu/robotsystem_device_driver/kadai1/modules.order | scripts/mod/modpost -m -a   -o /home/ubuntu/robotsystem_device_driver/kadai1/Module.symvers -e -i Module.symvers   -T -
