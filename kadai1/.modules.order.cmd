@@ -1,1 +1,1 @@
-cmd_/home/ubuntu/kadai1/modules.order := {   echo /home/ubuntu/kadai1/kadai1.ko; :; } | awk '!x[$$0]++' - > /home/ubuntu/kadai1/modules.order
+cmd_/home/ubuntu/robotsystem_device_driver/kadai1/modules.order := {   echo /home/ubuntu/robotsystem_device_driver/kadai1/kadai1.ko; :; } | awk '!x[$$0]++' - > /home/ubuntu/robotsystem_device_driver/kadai1/modules.order

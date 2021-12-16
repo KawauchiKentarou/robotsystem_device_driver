@@ -26,45 +26,51 @@ static ssize_t led_write(struct file* filp,const char* buf, size_t count, loff_t
 	//n = c - '0';
 	printk(KERN_INFO"receive %d\n", n);
 	if(c=='0'){
-		gpio_base[7] = 1 << 1;
+	for( i = 1; i < 9 ; i++){
+		gpio_base[10] = 1 << i;
+		}
 	}else if(c == '1'){
-		gpio_base[10] = 1 << 1;
-	}
-/*	if(c=='2'){
-                gpio_base[7] = 1 << 2;
-        }else{
-                gpio_base[10] = 1 << 2;
-        }
-	if(c=='3'){
+		for( i = 1; i < 9 ; i++){
+                gpio_base[10] = 1 << i;
+                }
+		gpio_base[7] = 1 << 1;
+	}else if(c=='2'){
+		for( i = 1; i < 9 ; i++){
+                gpio_base[10] = 1 << i;
+                }
+            	gpio_base[7] = 1 << 2;
+        }else if(c=='3'){
+		for( i = 1; i < 9 ; i++){
+                gpio_base[10] = 1 << i;
+                }
                 gpio_base[7] = 1 << 3;
-        }else{
-                gpio_base[10] = 1 << 3;
-        }
-	if(c=='4'){
+        }else if(c=='4'){
+		for( i = 1; i < 9 ; i++){
+                gpio_base[10] = 1 << i;
+                }
                 gpio_base[7] = 1 << 4;
-        }else{
-                gpio_base[10] = 1 << 4;
-        }
-	if(c=='5'){
+        }else if(c=='5'){
+		for( i = 1; i < 9 ; i++){
+                gpio_base[10] = 1 << i;
+                }
                 gpio_base[7] = 1 << 5;
-        }else{
-                gpio_base[10] = 1 << 5;
-        }
-	if(c=='6'){
+        }else if(c=='6'){
+		for( i = 1; i < 9 ; i++){
+                gpio_base[10] = 1 << i;
+                }
                 gpio_base[7] = 1 << 6;
-        }else{
-                gpio_base[10] = 1 << 6;
-        }
-	if(c=='7'){
+        }else if(c=='7'){
+		for( i = 1; i < 9 ; i++){
+                gpio_base[10] = 1 << i;
+                }
                 gpio_base[7] = 1 << 7;
-        }else{
-                gpio_base[10] = 1 << 7;
-        }
-	if(c=='8'){
+        }else if(c=='8'){
+		for( i = 1; i < 9 ; i++){
+                gpio_base[10] = 1 << i;
+                }
                 gpio_base[7] = 1 << 8;
-        }else{
-                gpio_base[10] = 1 << 8;
-        }*/
+        }
+	n = c - '0';
 
 	return 1;
 }
@@ -102,7 +108,7 @@ static int __init init_mod(void)
 	
 	gpio_base = ioremap(0xfe200000, 0xA0);
 	for(i = 1; i < 9; i++){
-		const u32 led = 1;
+		const u32 led = i;
 		const u32 index = led/10;
 		const u32 shift = (led%10)*3;
 		const u32 mask = ~(0x7 <<shift);
