@@ -8,19 +8,21 @@ Ubuntu 20.04.3 LTS
 
 RaspberryPi4
 
-## 使用したもの
+## 使用器具
 
 RaspberryPi4
 
-電源用USBケーブル　TypeC
+電源ケーブル　UCB　Type-C
 
-ジャンパ線
+ブレットボード
 
-LED
+ジャンプワイヤ
+
+LED（赤、白）
 
 抵抗(200Ω)
 
-## 回路・配線図
+## 配線図
 ![bab479262b70244152235324d0c3639e](https://user-images.githubusercontent.com/77446351/146252630-d78beb55-0155-4534-ac2e-2a4741e0edee.png)
 
 ![IMG_9357](https://user-images.githubusercontent.com/77446351/146291218-65c515be-d98c-4922-8667-c6c15da3ecf2.jpg)
@@ -43,7 +45,7 @@ LED
 ```
  $ sudo insmod kadai1.ko
 ```
-### アンインストール・デバイスファイルの削除
+### アンインストール
 ```
  $ sudo rmmod kadai1
 ```
